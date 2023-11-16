@@ -1,25 +1,44 @@
+$colors: (
+    "primary": #3498db,
+    "secondary": #2ecc71,
+    "accent": #e74c3c,
+);
+
+$margin-values: 0 1rem;
+
+@mixin link-styles($color)
+{
+    text-decoration: none;
+    color: $color;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin flex-container($direction: row, $justify-content: flex-start, $align-items: stretch)
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
 nav
 {
     ul
     {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-
+        @include flex-container(column , center, flex-start);
         li
         {
-            margin-right: 1rem;
+            margin-right: nth($list: $margin-values, $n: 2);
 
             a
             {
-                text-decoration: none;
-                color: #fff;
-
-                &:hover
-                {
-                    text-decoration: underline;
-                }
+                @include link-styles(map.get($colors, "primary"));
             }
         }
     }
