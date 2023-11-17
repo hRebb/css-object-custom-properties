@@ -2,7 +2,7 @@
     pkgs ? import <nixpkgs> {}
 }:
 
-with pkgs
+with pkgs;
 
 mkShell {
     buildInputs = [ sass ];
