@@ -55,3 +55,8 @@ main
 {
     @include Main;
 }
+
+custom-main
+{
+    @extend main;
+}

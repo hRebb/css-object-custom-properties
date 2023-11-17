@@ -1,6 +1,16 @@
-header
+@mixin Header()
 {
-    background-color: $primary-color;
+    @function primary-color()
+    {
+        @return $primary-color;
+    }
+
+    @function darken-primary-color($amount)
+    {
+        @return adjust($primary-color, ($amount * 255), 0, 0);
+    }
+
+    background-color: primary-color();
     color: #fff;
     padding: 1rem 0;
 
@@ -8,4 +18,19 @@ header
     {
         margin: 0;
     }
+
+    &:hover
+    {
+        background-color: darken-primary-color(10%);
+    }
+}
+
+header
+{
+    @include Header;
+}
+
+custom-header
+{
+    @extend header;
 }
