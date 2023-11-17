@@ -51,12 +51,7 @@
     }
 }
 
-%main
-{
-    @include Main;
-}
-
 main
 {
-    @extend main;
+    @include Main;
 }
