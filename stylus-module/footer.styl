@@ -1,0 +1,17 @@
+get-color(color)
+  color color
+
+primary-color(primary-color)
+  background-color primary-color
+
+FooterClass()
+  primary-color(#3498db)
+  get-color(#fff)
+  padding 1rem 0
+  text-align center
+
+footer
+  FooterClass()
+
+.footer-custom
+  @extends footer
