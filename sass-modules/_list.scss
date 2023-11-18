@@ -1,0 +1,135 @@
+$primary-colors: (
+    "primary": #00bfff,
+    "secondary": #00ff7f,
+    "tertiary": #ffa500
+);
+
+$font-sizes: (
+    "h1": 36px,
+    "h2": 30px,
+    "h3": 24px,
+    "p": 18px
+);
+
+$border-size: (
+    "thin": 1px,
+    "medium": 2px,
+    "thick": 4px
+);
+
+$padding-sizes: (
+    "small": 10px,
+    "medium": 20px,
+    "large": 30px
+);
+
+$margin-size: (
+    "tiny": 5px,
+    "small": 10px,
+    "medium": 20px,
+    "large": 30px
+);
+
+$breakpoints-size : (
+    "small": 480px,
+    "medium": 768px,
+    "large": 1024px
+);
+
+$font-families : (
+    "primary": "Open Sans",
+    "secondary": "Roboto",
+    "tertiary": "Montserrat"
+);
+
+$icons-names : (
+    "search",
+    "arrow",
+    "close",
+    "menu"
+);
+
+$transition-names: (
+    "fade",
+    "slide",
+    "grow",
+    "shrink"
+);
+
+$gradient-property : (
+    "background-image",
+    "background",
+    "border-image"
+);
+
+$button-sizes: (
+    "small": 30px,
+    "medium": 50px,
+    "large": 80px
+);
+
+$image-sizes : (
+    "thumbnail": 50px,
+    "small": 100px,
+    "medium": 250px,
+    "large": 500px
+);
+
+$border-widths: (
+    "thin": 1px,
+    "medium": 2px,
+    "thick": 4px
+);
+
+$animation-transition: (
+    "fade",
+    "slide",
+    "pop",
+    "flip"
+);
+
+$border-shapes: (
+    "solid",
+    "dotted",
+    "dashed",
+    "double"
+);
+
+$fill-shape: (
+    "solid",
+    "gradient",
+    "image"
+);
+
+
+$padding-sizes: (
+    "small": 10px,
+    "medium": 20px,
+    "large": 30px
+);
+
+$position-sizes: (
+    "top-left",
+    "top-center",
+    "top-right",
+    "center-left",
+    "center",
+    "center-right",
+    "bottom-left",
+    "bottom-center",
+    "bottom-right"
+);
+
+$animation-sizes: (
+    "faster",
+    "fast",
+    "normal",
+    "slow",
+    "slower"
+);
+
+$opacity-sizes: (
+    "transparent",
+    "semi-transparent",
+    "opaque"
+);

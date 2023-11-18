@@ -1,0 +1,194 @@
+$font-sizing: (
+    "h1": (
+          "desktop": 36px,
+          "tablet": 32px,
+          "mobile": 24px
+    ),
+    "h2": (
+          "desktop": 30px,
+          "tablet": 28px,
+          "mobile": 22px
+    ),
+    "h3": (
+          "desktop": 24px,
+          "tablet": 22px,
+          "mobile": 18px
+    )
+);
+
+
+$margin-sizing: (
+      "header": (
+          "desktop": 20px,
+          "tablet": 15px,
+          "mobile": 10px
+      ),
+      "footer": (
+          "desktop": 30px,
+          "tablet": 25px,
+          "mobile": 20px
+      ),
+      "section": (
+          "desktop": 10px,
+          "tablet": 5px,
+          "mobile": 0
+      )
+);
+
+$padding-sizing: (
+        "button": (
+                "desktop": 10px,
+                "tablet": 8px,
+                "mobile": 6px
+        ),
+        "input": (
+                "desktop": 15px,
+                "tablet": 12px,
+                "mobile": 10px
+        ),
+        "textarea": (
+                "desktop": 20px,
+                "tablet": 18px,
+                "mobile": 15px
+        )
+);
+
+
+$border-sizes: (
+        "button": (
+                "desktop": 1px,
+                "tablet": 0.5px,
+                "mobile": 0.25px
+        ),
+        "input": (
+                "desktop": 2px,
+                "tablet": 1px,
+                "mobile": 0.5px
+        ),
+        "textarea": (
+                "desktop": 3px,
+                "tablet": 2px,
+                "mobile": 1px
+        )
+);
+
+$transition-sizes: (
+        "button": (
+                "desktop": 0.5s,
+                "tablet": 0.25s,
+                "mobile": 0.1s
+        ),
+        "input": (
+                "desktop": 0.2s,
+                "tablet": 0.1s,
+                "mobile": 0.05s
+        ),
+        "textarea": (
+                "desktop": 0.3s,
+                "tablet": 0.15s,
+                "mobile": 0.1s
+        )
+);
+
+
+$transition-properties : (
+        "button": (
+            "background-color",
+            "color",
+            "border-color"
+        ),
+
+        "input": (
+            "background-color",
+            "border-color",
+            "box-shadow"
+        ),
+
+        "textarea": (
+            "background-color",
+            "border-color",
+            "box-shadow"
+        )
+);
+
+
+$breakpoints: (
+        "small": (
+            "max-width": 480px
+        ),
+        "medium": (
+            "min-width": 481px,
+            "max-width": 768px
+        ),
+        "large": (
+            "min-width": 769px,
+            "max-width": 1024px
+        ),
+        "x-large": (
+            "min-width": 1025px
+        )
+);
+
+$button-styles: (
+      "primary": (
+        "color": #fff,
+        "background-color": #00bfff,
+        "border-color": #00bfff
+      ),
+
+      "secondary": (
+          "color": #fff,
+          "background-color": #00ff7f,
+          "border-color": #00ff7f
+      ),
+
+      "tertiary": (
+          "color": #fff,
+          "background-color": #ffa500,
+          "border-color": #ffa500
+      )
+);
+
+$shape-styles: (
+      "square": (
+          "border-radius": 0,
+          "border-color": #000
+      ),
+
+      "round": (
+          "border-radius": 50%,
+          "border-color": #000
+      ),
+
+      "pill": (
+          "border-radius": 100px,
+          "border-color": #000
+      )
+);
+
+$animation-styles: (
+      "fade": (
+          "opacity": 0,
+          "transition": "opacity 0.5s ease-in-out"
+      ),
+
+      "slide-up": (
+          "transform": 'translateY(-100%)',
+          "transition": "transform 0.5s ease-in-out"
+      ),
+
+      "slide-down": (
+          "transform": "translateY(-100%)",
+          "transition": "transform 0.5s ease-in-out"
+      ),
+
+      "slide-left": (
+          "transform": "translateX(-100%)",
+          "transition": "transform 0.5s ease-in-out"
+      ),
+
+     "slide-right": (
+          "transform": "translateX(100%)",
+          "transition": "transform 0.5s ease-in-out"
+     )
+);
