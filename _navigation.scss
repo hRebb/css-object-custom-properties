@@ -1,13 +1,5 @@
-@mixin Nav()
+%NavClassImplementation
 {
-    $colors: (
-    "primary": #3498db,
-    "secondary": #2ecc71,
-    "accent": #e74c3c,
-    );
-
-    $margin-values: 0 1rem;
-
     @mixin link-styles($color)
     {
         text-decoration: none;
@@ -28,7 +20,20 @@
         justify-content: $justify-content;
         align-items: $align-items;
     }
+}
 
+@mixin Nav()
+{
+    @extend %NavClassImplementation;
+
+    $colors: (
+    "primary": #3498db,
+    "secondary": #2ecc71,
+    "accent": #e74c3c,
+    );
+
+    $margin-values: 0 1rem;
+    
     ul
     {
         @include flex-container(column , center, flex-start);

@@ -1,4 +1,4 @@
-@mixin Footer()
+%FooterClassImplementation
 {
     @function get-color($color)
     {
@@ -9,6 +9,11 @@
     {
         @return $primary-color;
     }
+}
+
+@mixin Footer()
+{
+    @extend %FooterClassImplementation;
 
     background-color: primary-color(#3498db);
     color: get-color(#fff);

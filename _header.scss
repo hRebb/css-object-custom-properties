@@ -1,4 +1,4 @@
-@mixin Header()
+%HeaderClassImplementation
 {
     @function primary-color($primary-color)
     {
@@ -13,6 +13,12 @@
     {
         @return adjust($primary-color, ($amount * 255), 0, 0);
     }
+}
+
+
+@mixin Header()
+{
+    @extend %HeaderClassImplementation;
 
     background-color: primary-color(#ecf0f1);
     color: get-color(#fff);

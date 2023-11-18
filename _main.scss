@@ -1,4 +1,4 @@
-@mixin Main()
+%NavClassImplementation
 {
     @function get-color($color)
     {
@@ -22,6 +22,11 @@
             $amount: $amount
         );
     }
+}
+
+@mixin Main()
+{
+    @extend %NavClassImplementation;
 
     padding: 2rem 0;
 
