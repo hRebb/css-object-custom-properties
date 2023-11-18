@@ -1,38 +1,37 @@
-@mixin MainClass
+@mixin get-color($color)
 {
-    @mixin get-color($color)
+    color: $color;
+}
+
+@mixin dynamic-color($color, $type: base)
+{
+    @if $type == base
     {
         color: $color;
     }
 
-    @mixin dynamic-color($color, $type: base)
-    {
-        @if $type == base
-        {
-            color: $color;
-        }
-
-        @else if $type == primary {
-            color: $color;
-        }
-
-        @else if $type == secondary
-        {
-            color: $color;
-        }
-
-        @else
-        {
-            @error "Invalid color type: #{$type}. Use 'base', 'primary', or 'secondary'.";
-        }
-
+    @else if $type == primary {
+        color: $color;
     }
 
-    @mixin darken-color($amount)
+    @else if $type == secondary
     {
-        background-color: darken($color,$amount);
+        color: $color;
     }
 
+    @else
+    {
+        @error "Invalid color type: #{$type}. Use 'base', 'primary', or 'secondary'.";
+    }
+}
+
+@mixin darken-color($color, $amount)
+{
+    background-color: darken($color,$amount);
+}
+
+@mixin MainClass
+{
     padding: 2rem 0;
 
     .section

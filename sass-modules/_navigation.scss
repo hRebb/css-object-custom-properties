@@ -1,26 +1,27 @@
+@mixin link-styles($color)
+{
+  text-decoration: none;
+  color: $color;
+  
+  &:hover
+  {
+    text-decoration: underline;
+  }
+}
+  
+@mixin flex-container($direction: row, $justify-content: flex-start, $align-items: stretch)
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
 @mixin NavClass
 {
-    @mixin link-styles($color)
-    {
-        text-decoration: none;
-        color: $color;
-  
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-  
-    @mixin flex-container($direction: row, $justify-content: flex-start, $align-items: stretch)
-    {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: $direction;
-        justify-content: $justify-content;
-        align-items: $align-items;
-    }
-  
     $colors: (
       "primary": #3498db,
       "secondary": #2ecc71,

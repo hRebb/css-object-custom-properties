@@ -1,15 +1,15 @@
+@mixin get-color($color)
+{
+    color: $color;
+}
+
+@mixin primary-color($primary-color)
+{
+    background-color: $primary-color;
+}
+
 @mixin FooterClass
 {
-    @mixin get-color($color)
-    {
-        color: $color;
-    }
-
-    @mixin primary-color($primary-color)
-    {
-        background-color: $primary-color;
-    }
-
     @include primary-color(#3498db);
     @include get-color(#fff);
     padding: 1rem 0;

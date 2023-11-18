@@ -1,20 +1,20 @@
+@mixin primary-color($primary-color)
+{
+    background-color: $primary-color;
+}
+
+@mixin get-color($color)
+{
+    color: $color;
+}
+
+@mixin darken-primary-color($primary-color, $amount)
+{
+    background-color: adjust($primary-color, ($amount * 255), 0, 0);
+}
+
 @mixin HeaderClass
 {
-    @mixin primary-color($primary-color)
-    {
-        background-color: $primary-color;
-    }
-
-    @mixin get-color($color)
-    {
-        color: $color;
-    }
-
-    @mixin darken-primary-color($primary-color, $amount)
-    {
-        background-color: adjust($primary-color, ($amount * 255), 0, 0);
-    }
-
     @include primary-color(#ecf0f1);
     @include get-color(#fff);
 
