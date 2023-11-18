@@ -13,7 +13,7 @@
     font-family: 'Arial', sans-serif;
     @include get-background-color(#ecf0f1);
     @include get-text-color(#34495e);
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -26,5 +26,4 @@ body
 {
     @include BaseClass();
     width: 80%;
-    margin: 0 auto;
 }
