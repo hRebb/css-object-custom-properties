@@ -1,4 +1,4 @@
-%BaseClassImplementation
+/*%BaseClassImplementation
 {
     @function get-background-color($background-color)
     {
@@ -9,12 +9,20 @@
     {
         @return $text-color;
     }
+}*/
+
+@function get-background-color($background-color)
+{
+    @return $background-color;
+}
+
+@function get-text-color($text-color)
+{
+        @return $text-color;
 }
 
 @mixin Base()
 {
-    @extend %BaseClassImplementation;
-
     font-family: 'Arial', sans-serif;
     background-color: get-background-color(#ecf0f1);
     color: get-text-color(#34495e);
