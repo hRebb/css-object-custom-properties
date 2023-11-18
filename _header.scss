@@ -1,8 +1,12 @@
 @mixin Header()
 {
-    @function primary-color()
+    @function primary-color($primary-color)
     {
         @return $primary-color;
+    }
+    @function get-color($color)
+    {
+        @return $color;
     }
 
     @function darken-primary-color($amount)
@@ -10,8 +14,8 @@
         @return adjust($primary-color, ($amount * 255), 0, 0);
     }
 
-    background-color: primary-color();
-    color: #fff;
+    background-color: primary-color(#ecf0f1);
+    color: get-color(#fff);
     padding: 1rem 0;
 
     h1

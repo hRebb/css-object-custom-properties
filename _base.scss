@@ -1,15 +1,30 @@
-body
+@mixin Base()
 {
+    @function get-background-color($background-color)
+    {
+        @return $background-color;
+    }
+
+    @function get-text-color($text-color)
+    {
+        @return $text-color;
+    }
+
     font-family: 'Arial', sans-serif;
-    background-color: $background-color;
-    color: $text-color;
+    background-color: get-background-color(#ecf0f1);
+    color: get-text-color(#34495e);
     margin: 0;
     padding: 0;
+}
+
+body
+{
+    @include Base;
 }
   
 .container
 {
+    @extend body;
     width: 80%;
     margin: 0 auto;
-}
-  
+} 

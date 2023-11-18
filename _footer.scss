@@ -1,7 +1,27 @@
-footer
+@mixin Footer()
 {
-    background-color: $primary-color;
-    color: #fff;
+    @function get-color($color)
+    {
+        @return $color;
+    }
+
+    @function primary-color($primary-color)
+    {
+        @return $primary-color;
+    }
+
+    background-color: primary-color(#3498db);
+    color: get-color(#fff);
     padding: 1rem 0;
     text-align: center;
+}
+
+footer
+{
+    @include Footer();
+}
+
+.footer-custom
+{
+    @extend footer;
 }

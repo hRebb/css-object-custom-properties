@@ -1,11 +1,16 @@
 @mixin Main()
 {
-    @function primary-color()
+    @function get-color($color)
+    {
+        @return $color;
+    }
+
+    @function primary-color($primary-color)
     {
         @return $primary-color;
     }
 
-    @function secondary-color()
+    @function secondary-color($secondary-color)
     {
         @return $secondary-color;
     }
@@ -13,7 +18,7 @@
     @function darken-secondary-color($amount)
     {
         @return darken(
-            $color: secondary-color(),
+            $color: secondary-color(#2ecc71),
             $amount: $amount
         );
     }
@@ -26,7 +31,7 @@
 
         h2
         {
-            color: primary-color();
+            color: primary-color(#3498db);
         }
 
         p
@@ -39,8 +44,8 @@
     {
         display: inline-block;
         padding: 0.75rem 1.5rem;
-        background-color: secondary-color();
-        color: #fff;
+        background-color: secondary-color(#2ecc71);
+        color: get-color(#fff);
         text-decoration: none;
         border-radius: 4px;
     }
@@ -56,7 +61,7 @@ main
     @include Main;
 }
 
-custom-main
+.custom-main
 {
     @extend main;
 }
