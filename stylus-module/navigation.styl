@@ -27,10 +27,10 @@ NavClass()
     flex-container(column, center, flex-start)
 
     li
-      margin-right lookup(margin-values, 2)
+      margin-right margin-values[1]
 
       a
-        link-styles(lookup(colors, 'primary'))
+        link-styles(colors['primary'])
 
 nav
   NavClass()
