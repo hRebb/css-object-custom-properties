@@ -13,8 +13,6 @@
 
 @mixin Base()
 {
-    @extend %BaseClassImplementation;
-
     font-family: 'Arial', sans-serif;
     background-color: get-background-color(#ecf0f1);
     color: get-text-color(#34495e);

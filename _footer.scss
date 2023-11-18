@@ -13,8 +13,6 @@
 
 @mixin Footer()
 {
-    @extend %FooterClassImplementation;
-
     background-color: primary-color(#3498db);
     color: get-color(#fff);
     padding: 1rem 0;

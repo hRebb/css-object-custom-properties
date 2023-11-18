@@ -20,11 +20,6 @@
         justify-content: $justify-content;
         align-items: $align-items;
     }
-}
-
-@mixin Nav()
-{
-    @extend %NavClassImplementation;
 
     $colors: (
     "primary": #3498db,
@@ -43,10 +38,15 @@
 
             a
             {
-                @include link-styles(map.get($colors, "primary"));
+                @include link-styles(map-get($colors, "primary"));
             }
         }
     }
+}
+
+@mixin Nav()
+{
+    @extend %NavClassImplementation;    
 }
 
 nav

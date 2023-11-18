@@ -18,8 +18,6 @@
 
 @mixin Header()
 {
-    @extend %HeaderClassImplementation;
-
     background-color: primary-color(#ecf0f1);
     color: get-color(#fff);
     padding: 1rem 0;

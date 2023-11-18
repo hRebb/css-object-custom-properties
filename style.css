@@ -1,0 +1,83 @@
+html, body, .container, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, .footer-custom, header, custom-header, hgroup,
+menu, nav, .custom-nav, output, ruby, section, summary,
+time, mark, audio, video
+ {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* Add your own styles below if needed */
+body, .container {
+  font-family: 'Arial', sans-serif;
+  background-color: get-background-color(#ecf0f1);
+  color: get-text-color(#34495e);
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+header, custom-header {
+  background-color: primary-color(#ecf0f1);
+  color: get-color(#fff);
+  padding: 1rem 0; }
+  header h1, custom-header h1 {
+    margin: 0; }
+  header:hover, custom-header:hover {
+    background-color: darken-primary-color(10%); }
+
+nav ul, .custom-nav ul, main ul, .custom-main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
+  nav ul li, .custom-nav ul li, main ul li, .custom-main ul li {
+    margin-right: 1rem; }
+    nav ul li a, .custom-nav ul li a, main ul li a, .custom-main ul li a {
+      text-decoration: none;
+      color: #3498db; }
+      nav ul li a:hover, .custom-nav ul li a:hover, main ul li a:hover, .custom-main ul li a:hover {
+        text-decoration: underline; }
+
+main, .custom-main {
+  padding: 2rem 0; }
+  main .section, .custom-main .section {
+    margin-bottom: 2rem; }
+    main .section h2, .custom-main .section h2 {
+      color: primary-color(#3498db); }
+    main .section p, .custom-main .section p {
+      line-height: 1.6; }
+  main .button, .custom-main .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: secondary-color(#2ecc71);
+    color: get-color(#fff);
+    text-decoration: none;
+    border-radius: 4px; }
+  main:hover, .custom-main:hover {
+    background-color: darken-secondary-color(10%); }
+
+footer, .footer-custom {
+  background-color: primary-color(#3498db);
+  color: get-color(#fff);
+  padding: 1rem 0;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
