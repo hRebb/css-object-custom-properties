@@ -85,24 +85,22 @@ video,
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 body {
   font-family: 'Arial', sans-serif;
   background-color: #ecf0f1;
   color: #34495e;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 .container {
   font-family: 'Arial', sans-serif;
   background-color: #ecf0f1;
   color: #34495e;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 80%;
-  margin: 0 auto;
 }
 header,
 .custom-header {
