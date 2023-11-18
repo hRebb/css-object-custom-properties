@@ -1,0 +1,39 @@
+link-styles(color)
+  text-decoration none
+  color color
+
+  &:hover
+    text-decoration underline
+
+flex-container(direction = row, justify-content = flex-start, align-items = stretch)
+  list-style none
+  padding 0
+  margin 0
+  display flex
+  flex-direction direction
+  justify-content justify-content
+  align-items align-items
+
+NavClass()
+  colors = {
+    'primary': #3498db,
+    'secondary': #2ecc71,
+    'accent': #e74c3c
+  }
+
+  margin-values = 0 1rem
+
+  ul
+    flex-container(column, center, flex-start)
+
+    li
+      margin-right lookup(margin-values, 2)
+
+      a
+        link-styles(lookup(colors, 'primary'))
+
+nav
+  NavClass()
+
+.custom-nav
+  NavClass()
