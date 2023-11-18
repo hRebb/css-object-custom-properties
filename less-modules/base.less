@@ -1,0 +1,33 @@
+#BaseClass
+{
+    .get-background-color(@background-color)
+    {
+      background-color: @background-color;
+    }
+  
+    .get-text-color(@text-color)
+    {
+      color: @text-color;
+    }
+  
+    .BaseClass()
+    {
+      font-family: 'Arial', sans-serif;
+      .get-background-color(#ecf0f1);
+      .get-text-color(#34495e);
+      margin: 0;
+      padding: 0;
+    }
+}
+  
+body
+{
+    #BaseClass>.BaseClass();
+}
+  
+.container
+{
+    #BaseClass>.BaseClass();
+    width: 80%;
+    margin: 0 auto;
+}

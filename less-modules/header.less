@@ -1,0 +1,45 @@
+#HeaderClass
+{
+    .primary-color(@primary-color)
+    {
+        background-color: @primary-color;
+    }
+
+    .get-color(@color)
+    {
+        color: @color;
+    }
+
+    .darken-primary-color(@primary-color, @amount)
+    {
+        background-color: darken(@primary-color, @amount);
+    }
+
+    .HeaderClass()
+    {
+        .primary-color(#ecf0f1);
+        .get-color(#fff);
+
+        padding: 1rem 0;
+
+        h1
+        {
+            margin: 0;
+        }
+
+        &:hover
+        {
+            .darken-primary-color(#ecf0f1, 10%);
+        }
+    }
+}
+
+header
+{
+    #HeaderClass>.HeaderClass();
+}
+
+.custom-header
+{
+    &:extend(header);
+}
