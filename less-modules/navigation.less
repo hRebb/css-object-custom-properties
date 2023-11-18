@@ -1,0 +1,54 @@
+@colors: {
+    primary: #3498db;
+    secondary: #2ecc71;
+    accent: #e74c3c;
+}
+
+@margin-values: 0 1rem;
+
+#NavClass
+{
+    .link-styles(@color)
+    {
+        text-decoration: none;
+        color: @color;
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
+
+    .flex-container(@direction: row, @justify-content: flex-start, @aling-items: stretch)
+    {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: @direction;
+        justify-content: @justify-content;
+        align-items: @aling-items;
+    }
+
+    .NavClass()
+    {
+        ul
+        {
+            .flex-container(column, center, flex-start);
+
+            li
+            {
+                margin-right: extract(@margin-values, 2);
+                a
+                {
+                    .link-styles(@colors[primary]);
+                }
+            }
+        }
+    }
+}
+
+nav, .custom-nav
+{
+    #NavClass>.NavClass();
+}

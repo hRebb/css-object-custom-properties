@@ -1,0 +1,70 @@
+#MainClass
+{
+    .get-color(@color)
+    {
+        color: @color;
+    }
+
+    .dynamic-color(@color, @type: base)
+    {
+        & when (@type = base)
+        {
+            color: @color;
+        }
+
+        & when (@type = primary)
+        {
+            color: @color;
+        }
+
+        & when (@type = secondary)
+        {
+            color: @color;
+        }
+    }
+
+    .darken-color(@color, @amount)
+    {
+        background-color: darken(@color, @amount);
+    }
+
+    .MainClass()
+    {
+        padding: 2rem 0;
+
+        .section
+        {
+            margin-bottom: 2rem;
+
+            h2
+            {
+                .dynamic-color(#3498db, primary);
+            }
+
+            p
+            {
+                line-height: 1.6;
+            }
+        }
+
+        .button
+        {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            .dynamic-color(#2ecc71, secondary);
+            .get-color(#fff);
+            text-decoration: none;
+            border-radius: 4px;
+
+            &:hover
+            {
+                .darken-color(#2ecc71, 10%);
+            }
+        }
+    }
+}
+
+main, .custom-main
+{
+    #MainClass>.MainClass();
+}
