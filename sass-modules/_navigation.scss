@@ -1,15 +1,15 @@
-%NavClassImplementation
+@mixin NavClass
 {
     @mixin link-styles($color)
     {
         text-decoration: none;
         color: $color;
-
+  
         &:hover {
             text-decoration: underline;
         }
     }
-
+  
     @mixin flex-container($direction: row, $justify-content: flex-start, $align-items: stretch)
     {
         list-style: none;
@@ -20,41 +20,37 @@
         justify-content: $justify-content;
         align-items: $align-items;
     }
-
+  
     $colors: (
-    "primary": #3498db,
-    "secondary": #2ecc71,
-    "accent": #e74c3c,
+      "primary": #3498db,
+      "secondary": #2ecc71,
+      "accent": #e74c3c,
     );
-
+  
     $margin-values: 0 1rem;
-    
+  
     ul
     {
-        @include flex-container(column , center, flex-start);
-        li
+      @include flex-container(column, center, flex-start);
+  
+      li
+      {
+        margin-right: nth($list: $margin-values, $n: 2);
+  
+        a
         {
-            margin-right: nth($list: $margin-values, $n: 2);
-
-            a
-            {
-                @include link-styles(map-get($colors, "primary"));
-            }
+          @include link-styles(map-get($colors, "primary"));
         }
+      }
     }
 }
-
-@mixin Nav()
+  
+nav 
 {
-    @extend %NavClassImplementation;    
+    @include NavClass;
 }
-
-nav
-{
-    @include Nav;
-}
-
+  
 .custom-nav
 {
-    @extend nav;
+    @include NavClass;
 }

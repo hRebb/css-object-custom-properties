@@ -1,43 +1,30 @@
-/*%BaseClassImplementation
+@mixin BaseClass
 {
-    @function get-background-color($background-color)
+    @mixin get-background-color($background-color)
     {
-        @return $background-color;
+        background-color: $background-color;
     }
 
-    @function get-text-color($text-color)
+    @mixin get-text-color($text-color)
     {
-        @return $text-color;
+        color: $text-color;
     }
-}*/
-
-@function get-background-color($background-color)
-{
-    @return $background-color;
-}
-
-@function get-text-color($text-color)
-{
-        @return $text-color;
-}
-
-@mixin Base()
-{
+    
     font-family: 'Arial', sans-serif;
-    background-color: get-background-color(#ecf0f1);
-    color: get-text-color(#34495e);
+    @include get-background-color(#ecf0f1);
+    @include get-text-color(#34495e);
     margin: 0;
     padding: 0;
 }
 
 body
 {
-    @include Base;
+    @include BaseClass();
 }
-  
+
 .container
 {
-    @include Base;
+    @include BaseClass();
     width: 80%;
     margin: 0 auto;
-} 
+}

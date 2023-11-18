@@ -1,25 +1,23 @@
-%HeaderClassImplementation
+@mixin HeaderClass
 {
-    @function primary-color($primary-color)
+    @mixin primary-color($primary-color)
     {
-        @return $primary-color;
-    }
-    @function get-color($color)
-    {
-        @return $color;
+        background-color: $primary-color;
     }
 
-    @function darken-primary-color($amount)
+    @mixin get-color($color)
     {
-        @return adjust($primary-color, ($amount * 255), 0, 0);
+        color: $color;
     }
-}
 
+    @mixin darken-primary-color($primary-color, $amount)
+    {
+        background-color: adjust($primary-color, ($amount * 255), 0, 0);
+    }
 
-@mixin Header()
-{
-    background-color: primary-color(#ecf0f1);
-    color: get-color(#fff);
+    @include primary-color(#ecf0f1);
+    @include get-color(#fff);
+
     padding: 1rem 0;
 
     h1
@@ -29,16 +27,16 @@
 
     &:hover
     {
-        background-color: darken-primary-color(10%);
+        @include darken-primary-color(#ecf0f1, 10%);
     }
 }
 
 header
 {
-    @include Header;
+    @include HeaderClass();
 }
 
-custom-header
+.custom-header
 {
     @extend header;
 }

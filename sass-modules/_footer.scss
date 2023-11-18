@@ -1,27 +1,24 @@
-%FooterClassImplementation
+@mixin FooterClass
 {
-    @function get-color($color)
+    @mixin get-color($color)
     {
-        @return $color;
+        color: $color;
     }
 
-    @function primary-color($primary-color)
+    @mixin primary-color($primary-color)
     {
-        @return $primary-color;
+        background-color: $primary-color;
     }
-}
 
-@mixin Footer()
-{
-    background-color: primary-color(#3498db);
-    color: get-color(#fff);
+    @include primary-color(#3498db);
+    @include get-color(#fff);
     padding: 1rem 0;
     text-align: center;
 }
 
 footer
 {
-    @include Footer();
+    @include FooterClass();
 }
 
 .footer-custom

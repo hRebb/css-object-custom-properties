@@ -1,32 +1,37 @@
-%NavClassImplementation
+@mixin MainClass
 {
-    @function get-color($color)
+    @mixin get-color($color)
     {
-        @return $color;
+        color: $color;
     }
 
-    @function primary-color($primary-color)
+    @mixin dynamic-color($color, $type: base)
     {
-        @return $primary-color;
+        @if $type == base
+        {
+            color: $color;
+        }
+
+        @else if $type == primary {
+            color: $color;
+        }
+
+        @else if $type == secondary
+        {
+            color: $color;
+        }
+
+        @else
+        {
+            @error "Invalid color type: #{$type}. Use 'base', 'primary', or 'secondary'.";
+        }
+
     }
 
-    @function secondary-color($secondary-color)
+    @mixin darken-color($amount)
     {
-        @return $secondary-color;
+        background-color: darken($color,$amount);
     }
-
-    @function darken-secondary-color($amount)
-    {
-        @return darken(
-            $color: secondary-color(#2ecc71),
-            $amount: $amount
-        );
-    }
-}
-
-@mixin Main()
-{
-    @extend %NavClassImplementation;
 
     padding: 2rem 0;
 
@@ -36,7 +41,7 @@
 
         h2
         {
-            color: primary-color(#3498db);
+            @include dynamic-color(#3498db, primary);
         }
 
         p
@@ -49,24 +54,24 @@
     {
         display: inline-block;
         padding: 0.75rem 1.5rem;
-        background-color: secondary-color(#2ecc71);
-        color: get-color(#fff);
+        @include dynamic-color(#2ecc71, secondary);
+        @include get-color(#fff);
         text-decoration: none;
         border-radius: 4px;
-    }
 
-    &:hover
-    {
-        background-color: darken-secondary-color(10%);
+        &:hover
+        {
+            @include darken-color(#2ecc71, 10%);
+        }
     }
 }
 
 main
 {
-    @include Main;
+    @include MainClass();
 }
 
 .custom-main
 {
-    @extend main;
+    @include MainClass();
 }
